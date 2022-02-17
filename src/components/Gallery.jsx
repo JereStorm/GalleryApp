@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Image from './Image';
 
 
 const Gallery = ({images}) => {
+  useEffect(() => {
+    console.log('renderizado Gallery')
+  })
     
   return (
     <section className="gallery">
@@ -12,6 +15,12 @@ const Gallery = ({images}) => {
                 < Image photo={photo} key={photo.id}/>
             ))
         }
+        {
+          images.length === 0 &&
+          <div className="container text-center d-flex justify-content-center align-items-center">
+            <p className='alert alert-warning text-center alert__text'>No se encontraron resultados</p>
+          </div>
+        } 
     </section>
   )
 }

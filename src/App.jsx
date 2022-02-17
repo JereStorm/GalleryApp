@@ -2,21 +2,25 @@ import React, { useEffect, useState } from 'react';
 import Gallery from "./components/Gallery";
 
 const baseURL = 'https://api.pexels.com/v1/';
-// const baseURL = 'mosrew';
 const ApiKey = '563492ad6f91700001000001f10b63e5fdf344efb9bddbabf42e01d5';
 
 const initialArray = [];
 
 const App = ()=> {
-  const [searcher, setSearcher] = useState('espacio');
-  const [images, setImages] = useState(null)
+  const [searcher, setSearcher] = useState('any');
+  const [images, setImages] = useState(initialArray)
 
+  useEffect(() => {
+  console.log('renderizado APP')
+  })
+  
     useEffect(() => {
+      console.log('Use efect searcher: '+searcher)
       searchImage();
     }, [searcher])
 
     useEffect(() => {
-      console.log(images)
+      console.log('Use efect Imagenes: '+images)
     }, [images])
     
     
@@ -29,7 +33,7 @@ const App = ()=> {
         const url = baseURL+'search?locale=es-ES&&';
 
         try {
-          const res = await fetch(`${url}query=${searcher}&&per_page=5`, {
+          const res = await fetch(`${url}query=${searcher}&&per_page=3`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': ApiKey

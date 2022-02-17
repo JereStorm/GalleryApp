@@ -21,6 +21,11 @@ code {
   gap: 20px;
   flex-wrap: wrap;
 }
+.alert__text {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
 .gallery__picture {
   min-width: 200px;
   flex: 350px;
