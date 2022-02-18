@@ -3,9 +3,9 @@ import Image from './Image';
 
 
 const Gallery = ({images}) => {
-  useEffect(() => {
-    console.log('renderizado Gallery')
-  })
+  // useEffect(() => {
+  //   console.log('renderizado Gallery')
+  // })
     
   return (
     <section className="gallery">
@@ -21,6 +21,7 @@ const Gallery = ({images}) => {
             <p className='alert alert-warning text-center alert__text'>No se encontraron resultados</p>
           </div>
         } 
+        
     </section>
   )
 }
