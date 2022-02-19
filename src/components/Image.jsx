@@ -1,9 +1,7 @@
-import React, {useEffect} from 'react'
+import React from 'react';
 
 const Image = ({photo}) => {
-  // useEffect(() => {
-  //   console.log('renderizado Image')
-  //   })
+  
   return (
     <figure className='gallery__picture'>
       <a href={photo.url} tarjet="blank_">

@@ -1,12 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Image from './Image';
 
 
 const Gallery = ({images}) => {
-  // useEffect(() => {
-  //   console.log('renderizado Gallery')
-  // })
-    
+  
   return (
     <section className="gallery">
         {
