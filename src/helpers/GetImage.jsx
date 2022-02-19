@@ -2,7 +2,8 @@ import React from 'react';
 
 const ApiKey = '563492ad6f91700001000001f10b63e5fdf344efb9bddbabf42e01d5';
 
-const SearchImage = async ({url}) => {
+const GetImage = async (url) => {
+  console.log('Adentro del SearchImage: ',url)
   try {
     const res = await fetch(url, {
       headers: {
@@ -17,8 +18,8 @@ const SearchImage = async ({url}) => {
       return 'estoy en el else';
     }
   } catch (error) {
-      return 'Error 404';
+      return error;
   }
 };
 
-export default SearchImage;
+export default GetImage;
