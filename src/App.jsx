@@ -22,11 +22,13 @@ const App = ()=> {
   }, [searcher]);
 
   const updatePage = () => {
-    console.log('Adentro del App',nextPage)
+    // console.log('Adentro del App',nextPage)
+
     setLoading(true);
     GetImage(nextPage)
    .then((images) => {
-     console.log(images)
+    //  console.log(images)
+    
      setImages(images.photos);
      setNextPage(images.next_page);
     setLoading(false)
